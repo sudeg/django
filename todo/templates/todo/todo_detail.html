@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-4 offset-4">
+    <a href="/" class="btn btn-secondary">Go Home</a>
+    <div class="card mt-3">
+        <div class="card-header">
+            <a href="/{{ todo.id }}">
+                <h4>{{todo.name}} </h4>
+            </a>
+        </div>
+        <div class="card-body">
+            <a href="/{{ todo.id }}">
+                <p>{{todo.due_date}} </p>
+            </a>
+        </div>
+        <div class="card-footer">
+            <a href="/{{ todo.id }}/update/" class="btn btn-secondary">Update</a>
+
+            <a href="/{{ todo.id }}/delete/" class="btn btn-secondary">Delete</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
